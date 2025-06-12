@@ -3,8 +3,16 @@ import Head from 'next/head';
 import { signIn } from 'next-auth/react';
 import styles from '../styles/Login.module.css';
 import Footer from '../components/Footer';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function Login() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,29 +32,25 @@ export default function Login() {
             Bienvenido a Ceuta Co-Living, tu espacio para compartir, conectar y crecer juntos.
           </p>
 
-          <button
-            className={styles.googleButton}
-            onClick={() => signIn('google')}
-          >
-            <img 
-              src="/logo-google-96.svg" 
-              alt="Google logo" 
-              className={styles.googleLogo} 
-            />
-            Iniciar sesión con Google
-          </button>
+          {isMounted && (
+            <>
+              <button
+                className={styles.googleButton}
+                onClick={() => signIn('google')}
+              >
+                <Image src="/logo-google-96.svg" alt="Google logo" width={20} height={20} />
+                Iniciar sesión con Google
+              </button>
 
-          <button
-            className={styles.facebookButton}
-            onClick={() => signIn('facebook')}
-          >
-            <img 
-              src="/logo-facebook-96.svg"
-              alt="Facebook logo"
-              className={styles.facebookLogo} 
-            />
-            Iniciar sesión con Facebook
-          </button>
+              <button
+                className={styles.facebookButton}
+                onClick={() => signIn('facebook')}
+              >
+                <Image src="/logo-facebook-96.svg" alt="Facebook logo" width={20} height={20} />
+                Iniciar sesión con Facebook
+              </button>
+            </>
+          )}
 
           <section className={styles.features}>
             <div className={styles.loginInfoContainer}>
