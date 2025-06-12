@@ -20,9 +20,7 @@ export default function Login() {
         <meta name="description" content="Login para acceder a Ceuta Co-Living" />
       </Head>
 
-      <header className={styles.header}>
-        <h1>Ceuta Co-Living</h1>
-      </header>
+      <header>Ceuta Co-Living</header>
 
       <main className={styles.container}>
         <div className={styles.loginBox}>
