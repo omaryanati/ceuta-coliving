@@ -41,14 +41,6 @@ export default function Login() {
                 <Image src="/logo-google-96.svg" alt="Google logo" width={20} height={20} />
                 Iniciar sesión con Google
               </button>
-
-              <button
-                className={styles.facebookButton}
-                onClick={() => signIn('facebook')}
-              >
-                <Image src="/logo-facebook-96.svg" alt="Facebook logo" width={20} height={20} />
-                Iniciar sesión con Facebook
-              </button>
             </>
           )}
 

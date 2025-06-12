@@ -64,32 +64,8 @@
   background-color: #61876e;
 }
 
-.facebookButton {
-  background-color: #3b5998;
-  border: none;
-  color: white;
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 280px;
-}
-
-.facebookButton:hover {
-  background-color: #2d4373;
-}
 
 .googleLogo{
-  width: 20px;
-  height: 20px;
-}
-.facebookLogo {
   width: 20px;
   height: 20px;
 }
